@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drums</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="player-piano">
+      <div class="side">
+        <button data-key="65" class="play-btn">
+          <div class="key-name">A</div>
+          <div class="sound-name">Taiko</div>
+        </button>
+        <button data-key="83" class="play-btn">
+          <div class="key-name">S</div>
+          <div class="sound-name">Whoosh</div>
+        </button>
+        <button data-key="68" class="play-btn">
+          <div class="key-name">D</div>
+          <div class="sound-name">joke</div>
+        </button>
+        <button data-key="70" class="play-btn">
+          <div class="key-name">F</div>
+          <div class="sound-name">Kick</div>
+        </button>
+      </div>
+
+      <div class="side">
+        <button data-key="74" class="play-btn">
+          <div class="key-name">J</div>
+          <div class="sound-name">Click</div>
+        </button>
+        <button data-key="75" class="play-btn">
+          <div class="key-name">K</div>
+          <div class="sound-name">ScrShot</div>
+        </button>
+        <button data-key="76" class="play-btn">
+          <div class="key-name">L</div>
+          <div class="sound-name">Snare</div>
+        </button>
+        <button data-key="186" class="play-btn">
+          <div class="key-name">;</div>
+          <div class="sound-name">Base</div>
+        </button>
+      </div>
+    </div>
+    <button data-key="32" class="shout-down js-shout-down">
+      <div class="key-name">Space</div>
+      <div class="sound-name">Shout Down</div>
+    </button>
+
+    <audio data-key="65" src="./assets/sounds/taiko-drum-367656.mp3"></audio>
+    <audio
+      data-key="83"
+      src="./assets/sounds/whoosh-drum-hits-169007.mp3"
+    ></audio>
+    <audio data-key="68" src="./assets/sounds/joke-drums-242242.mp3"></audio>
+    <audio data-key="70" src="./assets/sounds/kick-drum-263837.mp3"></audio>
+
+    <audio data-key="74" src="./assets/sounds/sound-1-167181.mp3"></audio>
+    <audio
+      data-key="75"
+      src="./assets/sounds/screenshot-iphone-sound-336170.mp3"
+    ></audio>
+    <audio data-key="76" src="./assets/sounds/my-snare-_4-244413.mp3"></audio>
+    <audio
+      data-key="186"
+      src="./assets/sounds/big-bass-effect-274135.mp3"
+    ></audio>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

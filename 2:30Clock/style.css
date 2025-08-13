@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0; /* Убирает стандартные отступы */
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-image: url(assets/image-cache.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+}
+.clock {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.circle {
+  border: 20px solid white;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  position: relative;
+}
+.hand {
+  background-color: black;
+  width: 50%;
+  height: 12px;
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 50%; /*правее на 50%(ширины родителя) от правой стенки родителя */
+  transform-origin: right center; /*от какой точки дива будет вращение*/
+  transition-timing-function: cubic-bezier(0.4, 0, 0.95, 2.04);
+}
+.second-hand {
+  transition: all 0.05s;
+}
+.minute-hand {
+  transition: all 0.5s;
+}
+.hour-hand {
+  transition: all 1s;
+}
