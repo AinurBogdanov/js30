@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Reference VS Copy</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+      // start with strings, numbers and booleans
+
+      // Let's say we have an array
+      const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+      const team1 = players.slice();
+      const team2 = [].concat(players);
+      const team3 = [...players];
+      const team4 = Array.from(players);
+
+      // The same thing goes for objects, let's say we have a person object
+
+      // with Objects
+      const person = {
+        name: 'Wes Bos',
+        age: 80,
+      };
+
+      const personCopy = Object.assign({}, person, { age: 19, name: 'Ainur' });
+      //не глубокое копирование нужна функция
+      const personCopy2 = { ...person };
+      //не глубокое копирование
+
+      // глубокая копия но не лучшая практика
+      const poorMansDeepClone = JSON.parse(JSON.stringify(person));
+
+      console.log(poorMansDeepClone);
+    </script>
+  </body>
+</html>
