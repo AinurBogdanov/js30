@@ -28,7 +28,7 @@ function paintToCanvas() {
     let pixels = ctx.getImageData(0, 0, width, height);
     // mess with the data of the image
     // pixels = rgbSplit(pixels);
-    greenScreen(pixels);
+    rgbSplit(pixels);
 
     // ctx.globalAlpha = 0.1;
 
@@ -92,10 +92,12 @@ function greenScreen(pixels) {
 }
 
 function rgbSplit(pixels) {
-  for (let i = 0; i < pixels.data.length; i += 4) {
-    pixels.data[i - 50] = pixels.data[i + 0]; // RED
-    pixels.data[i + 100] = pixels.data[i + 1]; // GREEN
-    pixels.data[i - 50] = pixels.data[i + 2]; // Blue
+  const data = pixels.data;
+  for (let i = 0; i < data.length; i += 4) {
+    // Усиливаем только зелёный канал (G)
+    data[i] = data[i] * 1; // R: уменьшаем красный
+    data[i + 1] = data[i + 1] * 1; // G: усиливаем зелёный (150%)
+    data[i + 2] = data[i + 2] * 0.2; // B: уменьшаем синий
   }
   return pixels;
 }
